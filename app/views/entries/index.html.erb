@@ -1,17 +1,27 @@
-<h1>Listing Entries</h1>
-
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Description</th>
-    <th></th>
-  </tr>
-
-  <% @entries.each do |entry| %>
+<h1 class="jumbotron text-center">Listing Entries</h1>
+</div class="container">
+  <div class="card bg-secondary text-white">
+    <div class="card-body" align="center">
+      <%= button_to "ADD ENTRY", new_entry_path, :method => "get" %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <table class="table">
     <tr>
-      <td><%= entry.date %></td>
-      <td><%= entry.description %></td>
-      <td><%= link_to 'Show', entry_path(entry) %></td>
+      <th>Date</th>
+      <th>Description</th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.date %></td>
+        <td><%= entry.description %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Show', entry_path(entry) %></td>
+        <td><%= link_to 'Delete', entry_path(entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

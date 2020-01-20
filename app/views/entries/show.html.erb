@@ -1,9 +1,25 @@
-<p>
-  <strong>Date:</strong>
-  <%= @entry.date %>
-</p>
+<div class="container" align="center">
+  <div class="card bg-secondary text-white">
+    <div class="card-body">
+      <p>
+        <strong class="font-weight-bolder">Date:</strong>
+        <%= @entry.date %>
+      </p>
+    </div>
+  </div
 
-<p>
-  <strong>Description:</strong>
-  <%= @entry.description %>
-</p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <strong class="font-weight-bolder" font-size="60">Description:</strong>
+        <%= @entry.description %>
+      </p>
+    </div>
+  </div>
+
+</div>
+<div class="card bg-secondary text-white">
+  <div class="card-body" align="center">
+    <%= button_to "Back", entries_path, :method => "get" %>
+  </div>
+</div>
