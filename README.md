@@ -2,8 +2,6 @@
 
 Diary App Ruby
 
-To add new entry:
-http://localhost:3000/entries/new
-
-To see all entries:
-http://localhost:3000/entries/
+Features
+-Add, update, show entries
+-show more recent entries first
